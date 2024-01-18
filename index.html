@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Counter</title>
+</head>
+
+<body>
+	<div style="display: flex; gap: 8px; align-items: center;">
+		<button class="subtractButton" style="height: 32px; width: 32px;">-</button>
+		<span class="num" style="font-size: 28px;">0</span>
+		<button class="addButton" style="height: 32px; width: 32px;">+</button>
+	</div>
+
+	<script>
+		// Store all the elements we need in a constant
+		const numSpan = document.querySelector(".num");
+		const addButton = document.querySelector(".addButton");
+		const subtractButton = document.querySelector(".subtractButton");
+
+		function add() {
+			let num = parseInt(numSpan.innerText);
+			// Add one to the value
+			num++;
+			// Update the span with the new value
+			numSpan.innerText = num;
+		}
+
+		function subtract() {
+			let num = parseInt(numSpan.innerText);
+			// Subtract one from the value
+			num--;
+			// Update the span with the new value
+			numSpan.innerText = num;
+		}
+
+		// Add event listeners to the buttons
+		addButton.addEventListener("click", add);
+		subtractButton.addEventListener("click", subtract);
+	</script>
+</body>
+
+</html>
